@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejo Educativo Mesones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo opcional -->
+        <!-- <img src="logo.png" alt="Logo Complejo Educativo Mesones"> -->
+        <h1>Complejo Educativo Mesones</h1>
+        <!-- Menú de navegación opcional -->
+        <!-- <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav> -->
+    </header>
+
+    <main>
+        <aside class="seccion-anos">
+            <h2>Años</h2>
+            <div class="ano" id="primero">
+                <h3>Primer Año</h3>
+                <p>Toca aquí para completar el formulario.</p>
+                <button class="acceder-btn" data-ano="primero">Acceder</button>
+            </div>
+            <div class="ano" id="segundo">
+                <h3>Segundo Año</h3>
+                <p>Toca aquí para completar el formulario.</p>
+                <button class="acceder-btn" data-ano="segundo">Acceder</button>
+            </div>
+            <div class="ano" id="tercero">
+                <h3>Tercer Año</h3>
+                <p>Toca aquí para completar el formulario.</p>
+                <button class="acceder-btn" data-ano="tercero">Acceder</button>
+            </div>
+            <div class="ano" id="cuarto">
+                <h3>Cuarto Año</h3>
+                <p>Toca aquí para completar el formulario.</p>
+                <button class="acceder-btn" data-ano="cuarto">Acceder</button>
+            </div>
+            <div class="ano" id="quinto">
+                <h3>Quinto Año</h3>
+                <p>Toca aquí para completar el formulario.</p>
+                <button class="acceder-btn" data-ano="quinto">Acceder</button>
+            </div>
+            <div class="ano" id="enfermeria">
+                <h3>Enfermería</h3>
+                <p>Toca aquí para completar el formulario.</p>
+                <button class="acceder-btn" data-ano="enfermeria">Acceder</button>
+            </div>
+        </aside>
+
+        <section class="contenido-principal">
+            <div id="formulario-subida" class="formulario-subida" style="display: none;">
+                <h3>Subir Archivo para <span id="ano-seleccionado-titulo"></span></h3>
+                <form id="upload-form">
+                    <div>
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" id="descripcion" name="descripcion" required>
+                    </div>
+                    <div>
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div>
+                        <label for="archivo">Archivo (solo PDF):</label>
+                        <input type="file" id="archivo" name="archivo" accept=".pdf" required>
+                    </div>
+                    <button type="submit">Subir Archivo</button>
+                    <button type="button" id="cancelar-subida">Cancelar</button>
+                </form>
+            </div>
+
+            <section id="archivos-subidos" style="display: none;">
+                <h4>Archivos Subidos para <span id="ano-archivos-titulo"></span></h4>
+                <ul id="lista-archivos">
+                    <!-- Los archivos subidos se listarán aquí -->
+                </ul>
+            </section>
+
+            <div class="barra-busqueda">
+                <input type="search" id="search-input" placeholder="Buscar archivos...">
+                <button id="search-button">Buscar</button>
+            </div>
+
+            <section class="registro-seccion">
+                <p>Debes registrarte para poder descargar archivos.</p>
+                <form id="registro-form">
+                    <h4>Formulario de Registro</h4>
+                    <div>
+                        <label for="reg-nombre">Nombre:</label>
+                        <input type="text" id="reg-nombre" name="reg-nombre" required>
+                    </div>
+                    <div>
+                        <label for="reg-email">Email:</label>
+                        <input type="email" id="reg-email" name="reg-email" required>
+                    </div>
+                    <div>
+                        <label for="reg-password">Contraseña:</label>
+                        <input type="password" id="reg-password" name="reg-password" required>
+                    </div>
+                    <button type="submit">Registrarse</button>
+                </form>
+            </section>
+             <section class="mensaje-no-registrado" style="display: none;">
+                <p>Por favor, regístrate o inicia sesión para acceder a esta funcionalidad.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: info@complejomesones.edu.ar | Tel: (123) 456-7890</p>
+        <p>
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </p>
+        <p>&copy; 2023 Complejo Educativo Mesones. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
