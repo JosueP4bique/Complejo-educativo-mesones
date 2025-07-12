@@ -1,0 +1,322 @@
+/* Paleta de Colores */
+:root {
+    --color-primario-amarillo: #FFD700; /* Amarillo oro */
+    --color-secundario-amarillo: #FFFACD; /* Amarillo limón claro */
+    --color-primario-azul: #1E90FF;    /* Azul dodger */
+    --color-secundario-azul: #ADD8E6;  /* Azul claro */
+    --color-primario-rojo: #DC143C;     /* Rojo carmesí */
+    --color-secundario-rojo: #FFA07A;   /* Salmón claro */
+    --color-blanco: #FFFFFF;
+    --color-texto-oscuro: #333333;
+    --color-fondo-seccion: #f4f4f4;
+    --color-borde: #cccccc;
+}
+
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blanco);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-primario-azul);
+}
+
+button {
+    background-color: var(--color-primario-azul);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #167abc; /* Un azul un poco más oscuro */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+input[type="search"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    width: calc(100% - 18px); /* Ajustar por padding y borde */
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-primario-azul);
+    color: var(--color-blanco);
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 5px solid var(--color-primario-amarillo);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--color-blanco);
+}
+
+/* Contenedor Principal */
+main {
+    display: flex;
+    margin-top: 1rem;
+}
+
+/* Sección de Años (Vertical) */
+.seccion-anos {
+    width: 250px; /* Ancho fijo para la barra lateral de años */
+    background-color: var(--color-secundario-azul); /* Fondo azul claro */
+    padding: 1rem;
+    margin-right: 1rem;
+    border-right: 3px solid var(--color-primario-amarillo);
+}
+
+.seccion-anos h2 {
+    text-align: center;
+    color: var(--color-texto-oscuro);
+    border-bottom: 2px solid var(--color-primario-amarillo);
+    padding-bottom: 0.5rem;
+}
+
+.ano {
+    background-color: var(--color-blanco); /* Fondo blanco para cada año */
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.ano:nth-child(odd) { /* Alternar colores de fondo o bordes si se desea */
+   /* background-color: var(--color-secundario-amarillo); */
+}
+
+.ano h3 {
+    margin-top: 0;
+    color: var(--color-primario-rojo); /* Títulos de año en rojo */
+    font-size: 1.5em;
+}
+
+.ano p {
+    font-size: 0.9em;
+    margin-bottom: 0.5rem;
+}
+
+.ano .acceder-btn {
+    background-color: var(--color-primario-rojo); /* Botones "Acceder" en rojo */
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.ano .acceder-btn:hover {
+    background-color: #b81030; /* Rojo más oscuro */
+}
+
+
+/* Contenido Principal (Formularios, búsqueda, etc.) */
+.contenido-principal {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    padding: 1rem;
+    background-color: var(--color-fondo-seccion);
+}
+
+/* Formulario de Subida de Archivos */
+.formulario-subida {
+    background-color: var(--color-blanco);
+    padding: 1.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.formulario-subida h3 {
+    margin-top: 0;
+    color: var(--color-primario-azul);
+    border-bottom: 2px solid var(--color-primario-amarillo);
+    padding-bottom: 0.5rem;
+}
+
+.formulario-subida div {
+    margin-bottom: 1rem;
+}
+
+.formulario-subida label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.formulario-subida button[type="submit"] {
+    background-color: var(--color-primario-amarillo);
+    color: var(--color-texto-oscuro);
+    margin-right: 0.5rem;
+}
+.formulario-subida button[type="submit"]:hover {
+    background-color: #e6c300; /* Amarillo más oscuro */
+}
+
+.formulario-subida button[type="button"] { /* Botón Cancelar */
+    background-color: var(--color-borde);
+    color: var(--color-texto-oscuro);
+}
+.formulario-subida button[type="button"]:hover {
+    background-color: #b3b3b3;
+}
+
+
+/* Sección de Archivos Subidos */
+#archivos-subidos {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+}
+#archivos-subidos h4{
+    color: var(--color-primario-azul);
+}
+#lista-archivos li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--color-borde);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#lista-archivos li:last-child {
+    border-bottom: none;
+}
+#lista-archivos .delete-btn {
+    background-color: var(--color-secundario-rojo);
+    color: var(--color-blanco);
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+#lista-archivos .delete-btn:hover {
+    background-color: var(--color-primario-rojo);
+}
+
+
+/* Barra de Búsqueda */
+.barra-busqueda {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-busqueda input[type="search"] {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+    margin-bottom: 0; /* Reset margin from general input styles */
+}
+
+/* Sección de Registro */
+.registro-seccion {
+    background-color: var(--color-secundario-amarillo); /* Fondo amarillo claro */
+    padding: 1.5rem;
+    border: 1px solid var(--color-primario-amarillo);
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.registro-seccion h4 {
+    margin-top: 0;
+    color: var(--color-primario-rojo);
+    border-bottom: 2px solid var(--color-primario-rojo);
+    padding-bottom: 0.5rem;
+}
+
+.registro-seccion form div {
+    margin-bottom: 1rem;
+}
+
+.registro-seccion label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.registro-seccion button[type="submit"] {
+    background-color: var(--color-primario-rojo);
+}
+.registro-seccion button[type="submit"]:hover {
+    background-color: #b81030;
+}
+
+/* Mensaje para no registrados */
+.mensaje-no-registrado {
+    background-color: var(--color-secundario-rojo);
+    color: var(--color-texto-oscuro);
+    padding: 1rem;
+    border: 1px solid var(--color-primario-rojo);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+/* Pie de Página */
+footer {
+    background-color: var(--color-texto-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 5px solid var(--color-primario-azul);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--color-primario-amarillo);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive (Opcional, para mejorar en el futuro) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .seccion-anos {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        border-right: none;
+        border-bottom: 3px solid var(--color-primario-amarillo);
+    }
+
+    .barra-busqueda {
+        flex-direction: column;
+    }
+    .barra-busqueda input[type="search"] {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    .barra-busqueda button {
+        width: 100%;
+    }
+}
